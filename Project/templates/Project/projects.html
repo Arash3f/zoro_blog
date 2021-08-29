@@ -1,0 +1,27 @@
+{% extends "Project/_base_projects.html" %}
+{% load static %}
+
+{% block title %}
+<title>Projects</title>
+{% endblock  %}
+
+{% block header%}
+<h2>Projects</h2>
+<div class="page_link">
+    <a href="/portfolio">Home</a>
+    <a href="">Projects</a>
+</div>
+{% endblock %}
+
+{% block Projects %}
+    <div class="feature_inner row">
+        {% for proj in object_list %}
+            <div class="col-lg-4 col-md-6">
+                <div class="feature_item">
+                    <a class="light" href="project/detail/{{proj.slug}}/"><h4>{{proj.title}}</h4></a>
+                    <p>{{proj.summery | safe}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}

@@ -1,0 +1,73 @@
+{% extends "Contact_me/_base_contact.html" %}
+{% load static %}
+
+{% block title %}
+<title>Contact</title>
+{% endblock  %}
+
+{% block header%}
+<h2>Contact Us</h2>
+<div class="page_link">
+    <a href="/portfolio">Home</a>
+    <a href="">Contact Us</a>
+</div>
+{% endblock %}
+
+{% block contact_area %}
+
+<form method="post">
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}
+          <div class="alert alert-danger">
+              <strong>{{ error|escape }}</strong>
+          </div>
+    {% endfor %}
+    <div class="controls">
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="form_name">Name *</label>
+            {{form.name}}
+            {{form.name.error}}
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="form_email">Email *</label>
+              {{form.email}}
+              <div class="help-block with-errors"></div>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="form_email">Subject *</label>
+            {{form.subject}}
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="form_message">Message *</label>
+            {{form.message}}
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <input type="submit" class="btn btn-success btn-send" value="Send message">
+      </div>
+     
+    </div>
+</form>
+{{request.user1}}
+{% endblock  %}
