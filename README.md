@@ -6,8 +6,8 @@ The Bootstrap framework is used in the frontend.
 For this project, some free templates have been used, which parts of it have been customized and added.
 
 
-- [Features](https://github.com/Arash3f/falco_messenger#features)
-- [How to Deploy ?](https://github.com/Arash3f/falco_messenger#how-to-deploy)
+- [Features](https://github.com/Arash3f/zoro_blog#features)
+- [How to Deploy ?](https://github.com/Arash3f/zoro_blog#how-to-deploy)
 
 ## Features
 
